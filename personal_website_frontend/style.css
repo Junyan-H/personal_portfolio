@@ -1,0 +1,335 @@
+:root{
+    /*element colors*/
+    --background: #0f0e17;
+    --background2: #fffffe;
+
+    /*card backgrounds*/
+    --cBackground:#0f0e17;
+
+    /*headlines*/
+    --headline: #fffffe;
+    --headline2:#0f0e17;
+
+    /*paragraphs*/
+    --paragraph:#a7a9be;
+
+    /*illustration colors*/
+    --strokes: black;
+    --highlights: #ff8906;
+
+}
+
+*{
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    /*general font*/
+    font-family: "Noto Serif", sans-serif;
+    /*texts in center */
+    text-align: center;
+    /*background color*/
+    background-color: var(--background);
+
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    /*font family for all headers*/
+    font-family:"Poppins", sans-serif;
+}
+
+
+h1{
+    /*font */
+    font-size: 60px;
+}
+
+/*nav bars*/
+#nav-bar{
+    /*flex display*/
+    display: flex;
+    /*contente centers*/
+    justify-content: center;
+    /*position is relative to viewport*/
+    position: fixed;
+    /*possitioning*/
+    top: 0px;
+    width: 100%;
+    padding: 20px 0;
+
+    /*sizing of items inside*/
+    font-size: 20px;
+
+    /*background color and small underline border*/
+    background-color: var(--background);
+    border-bottom: 1px solid var(--strokes);
+}
+
+
+
+/*nav links -> ul display and fonts*/
+.nav-links{
+    display: flex;
+    list-style: none;
+}
+
+/*individual links padding and color*/
+.nav-links a{
+    text-decoration: none;
+    padding: 0 10px;
+    color: var(--headline);
+}
+
+/*when hovered individual links are underlined*/
+.nav-links a:hover{
+    text-decoration: underline;
+}
+
+/*creating space for section*/
+section{
+    min-height: 100vh;
+    padding: 70px 0;
+
+}
+
+#welcome-section{
+    /*background color*/
+    background-color: var(--background);
+
+    /*text color*/
+    color: var(--headline);
+    /*things goes in colomns*/
+    display: flex;
+    flex-direction: column;
+}
+
+#welcome-section h1{
+    /*move the intro to center of page*/
+    margin-top: 30vh;
+}
+#welcome-section p{
+    /*color for paragraph*/
+    color: var(--paragraph);
+    /*size of text*/
+    font-size: 25px;
+    /*spacing*/
+    margin: 25px 0;
+    /*italic*/
+    font-style: italic;
+}
+
+/*colors for projects div section*/
+#projects{
+    background-color: var(--background2);
+    color: var(--headline2);
+}
+
+#projects h1{
+    /*border for title*/
+    border-bottom: 5px solid var(--strokes);
+    /*border fits title*/
+    width: fit-content;
+    margin: auto;
+}
+
+/*project div in grid section*/
+#projects .projectsDiv{
+    display: grid;
+    /*styling columns in div*/
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+
+    /*gap and padding between each card*/
+    gap: 30px;
+    padding: 20px;
+
+    /*items are centered*/
+    place-items: center;
+
+    /*widht of container*/
+    max-width: 1200px;
+
+    /*margin of container*/
+    margin: auto;
+}
+
+/*limitation for each project tile*/
+#projects .project-tile{
+
+    /*dimentions of each tile*/
+    height: 525px;
+    width: 100%;
+
+    /*how stuff in project tile are aligned*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /*coloring of tile*/
+    background-color: var(--cBackground);
+    color:var(--headline) ;
+
+    /*removes the underline from link*/
+    text-decoration: None;
+
+/*    border and shadow*/
+    border-radius: 5px;
+    box-shadow: 8px 8px 10px 5px rgba(100,100,100, 0.8);
+
+}
+
+/*edits imgs element in each project tile*/
+#projects .project-tile img{
+    height: 100%;
+    width: 100%;
+    /*make it fit the cover*/
+    object-fit: cover;
+}
+
+/*font sizing for project tiles*/
+#projects .project-tile p{
+    font-size: 25px;
+    padding: 10px;
+}
+
+/*invisible before hover*/
+#projects .project-tile span{
+    opacity: 0%;
+    padding: 0 5px;
+}
+
+/*editing the spans so when hovered*/
+#projects .project-tile:hover span{
+    opacity: 100%;
+    font-size: 25px;
+    padding: 10px;
+
+    color: var(--highlights);
+
+    transition: opacity 0.25s ease-in;
+}
+
+/*show all */
+.show-all{
+    /*remove underline*/
+    text-decoration: none;
+
+    /*take entire width*/
+    width: max-content;
+    /*flex display*/
+    display: flex;
+    /*center item*/
+    align-items: center;
+    /*autos the margin*/
+    margin: auto;
+    /*padding*/
+    padding: 0px 15px;
+    /*color for background*/
+    background-color: var(--background);
+    color: var(--headline);
+
+    /*font sizes*/
+    font-size: 25px;
+    border-radius: 5px;
+
+    /*box shadow*/
+    box-shadow: 8px 8px 10px 5px rgba(90,90,90, 0.8);
+
+    /*cursor*/
+    cursor: pointer;
+
+}
+/*highlight when hovered*/
+.show-all:hover i {
+   color: var(--highlights);
+}
+
+/*contacts background*/
+#contact{
+    background-color: var(--background);
+    color: var(--headline);
+}
+/*contacts header*/
+#contact h1{
+    margin-top: 300px;
+}
+
+/*contact coffee question*/
+#contact .coffee-question{
+    /*color for paragraph*/
+    color: var(--paragraph);
+    /*size of text*/
+    font-size: 25px;
+    /*spacing*/
+    margin: 25px 0;
+    /*italic*/
+    font-style: italic;
+}
+
+#contact i{
+    font-size: 30px;
+}
+
+/*social medias*/
+#contact .social-medias{
+    /*warapped flex display*/
+    display: flex;
+    flex-wrap: wrap;
+
+    /*max width of 1000 px*/
+    max-width: 1000px;
+
+    /*justify content around*/
+    justify-content: space-around;
+
+    /*margins*/
+    margin: auto;
+    margin-top: 30px;
+
+}
+
+
+#contact .social-media{
+    text-decoration: none;
+    color: var(--headline);
+
+    transition: transform 0.2s ease-in;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    font-size: 22px;
+}
+
+
+#contact .social-media:hover {
+    transform: translateY(10px);
+}
+
+
+footer{
+    border-top: 3px solid var(--headline);
+    color: var(--headline);
+    font-size: 25px;
+    padding: 30px;
+
+}
+
+
+@media only screen and (width < 700px){
+    h1{
+        font-size: 50px;
+    }
+    #projects .project-tile{
+        height: 600px;
+        width: 100%;
+
+    }
+}
